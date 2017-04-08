@@ -20,4 +20,4 @@ Then click on "OAuth applications"
 Remember: you need to preface these lines in your `config.env` with "export" (not "export**s**")  
 > export CLIENT_ID=letters1234and5678numbers  
 
-[getting your client ID and secret from github](./client-id-and-secret.png)
+![getting your client ID and secret from github](./images/client-id-and-secret.png)
