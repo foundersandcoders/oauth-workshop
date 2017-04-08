@@ -1,4 +1,4 @@
-## Step 1 -- Setup a basic Web server
+## Step 1 - Set up a basic hapi server & serve 'Hello World'
 
 We need a server running before we can do anything.
 

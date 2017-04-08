@@ -7,7 +7,7 @@ Do _NOT_ copy and paste _anything_ from your previous workshops or projects. You
 Pair up and swap driver/navigator at each step.
 
 ## Walkthrough
-+ [Step 1 - set up a basic web server](./step1.md)
++ [Step 1 - set up a basic hapi server & serve 'Hello World'](./step1.md)
 + [Step 2 - register your app](./step2.md)
 + [Step 3 - create your login route](./step3.md)
 + [Step 4 - create your redirect route](./step4.md)
