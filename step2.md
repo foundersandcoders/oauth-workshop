@@ -30,3 +30,7 @@ Now you have a third file called `cert.pem`.
 `mv key.pem keys/key.pem`
 
 6. **Add "keys" to your gitignore**. NEVER PUSH YOUR KEYS TO GITHUB! :scream:
+
+7. Push your latest changes to github....yes the only thing that you have changed is that you added "keys" to your gitignore. But never forget this step :fire:.
+
+On to [step 3](./step3.md)
