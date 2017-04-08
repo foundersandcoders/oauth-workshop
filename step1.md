@@ -8,15 +8,16 @@ Try to do this step without looking back at your previous projects. Use the hapi
 
 2. Raise an issue on your repo, called "serve Hello World on home route" and commit against this issue.
 
-3. Clone your repo, `cd` into the directory & create a new node project locally, by running `npm init` to create your `package.json`
+3. Clone your repo & `cd` into the directory.  
+Create a new node project locally, by running `npm init` to create your `package.json`
 
-4. Install `hapi` and `inert`
+4. Create a Hapi server that serves up a 'Hello World' `html` file at `/`  
+Hints:  
+You will need to install `hapi` and `inert`  
+Then use `server.connection`, `server.register`, `server.route` & `server.start`
 
-5. Create a Hapi server that serves up a 'Hello World' `html` file at `/`  
-Hint: you will need `server.connection`, `server.register`, `server.route` & `server.start`
-
-6. Create a `config.env` file for your project and store your server address in a variable called `BASE_URL`
+5. Create a `config.env` file for your project and store your server address in a variable called `BASE_URL`
 
 Did you remember to make granular commits to your github repo as you went? Did you remember to reference the issue?
 
-Make sure you push up your changes to github, so that your partner can pull them down onto their local machine.
+Hopefully you're feeling a little warmed up. Make sure you push up your changes to github, and then head to [step 2](./step2.md).
