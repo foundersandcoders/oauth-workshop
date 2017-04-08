@@ -12,9 +12,8 @@ Try to do this step without looking back at your previous projects. Use the hapi
 Create a new node project locally, by running `npm init` to create your `package.json`
 
 4. Create a Hapi server that serves up a 'Hello World' `html` file at `/`  
-Hints:  
-You will need to install `hapi` and `inert`  
-Then use `server.connection`, `server.register`, `server.route` & `server.start`
+Remember, you will need to install `hapi` and `inert`  
+Hint: `server.connection`, `server.register`, `server.route` & `server.start`
 
 5. Create a `config.env` file for your project and store your server address in a variable called `BASE_URL`
 
