@@ -1,10 +1,30 @@
 ## Step 2 - Set up your SSL certificates
 
-DISCLAIMER: This step is _not_ a necessary part of the OAuth flow - OAuth operates over HTTPS by default. You can choose to go directly to [step 3](./step3.md) if you prefer.
+Ever wondered why it's called OAuth 2? Well, we're not going to go into a history lesson here about OAuth 1. But OAuth 2 relies on TLS (Transport Layer Security), instead of the complicated signature mechanisms of OAuth 1. If we were to dive into this, we could be here all day. But it's a fascinating topic.
 
-Ever wondered why it's called OAuth 2? Well, we're not going to go into a history lesson here about OAuth 1. But OAuth 2 relies on TLS (Transport Layer Security), instead of the complicated signature mechanisms of OAuth 1.
+Sufficed to say, in the official [OAuth 2.0 specification](https://tools.ietf.org/html/rfc6749), it is _heavily_ recommended that client applications do not operate without Transport Layer Security:
+> 3.1.2.1.  Endpoint Request Confidentiality
+>
+>  The redirection endpoint SHOULD require the use of TLS as described
+   in Section 1.6 when the requested response type is "code" or "token",
+   or when the redirection request will result in the transmission of
+   sensitive credentials over an open network.  This specification does
+   not mandate the use of TLS because at the time of this writing,
+   requiring clients to deploy TLS is a significant hurdle for many
+   client developers.  If TLS is not available, the authorization server
+   SHOULD warn the resource owner about the insecure endpoint prior to
+   redirection (e.g., display a message during the authorization
+   request).
+>
+>  Lack of transport-layer security can have a severe impact on the
+   security of the client and the protected resources it is authorized
+   to access.  The use of transport-layer security is particularly
+   critical when the authorization process is used as a form of
+   delegated end-user authentication by the client (e.g., third-party
+   sign-in service).
 
-So while we're talking about security, let's show you how to get your _own application_ onto a secure HTTPS connection too :smile:
+
+Technically, the spec only mandates that the _authorisation_ server (Github, in the context of this workshop) must require the use of TLS. But let's go ahead and make our application's server operate on a secure connection too :smile:
 
 First of all, now that you're swapping pairs, you'll want to swap computers too. This is a good habit to get into, partly so that your Github contribution graphs reflect an equal contribution to the project. (Bragging rights!) It's also nice to be able to code on your own machine, with your own setup...particularly if you're a vim user :speak_no_evil:. Aaaaand one last benefit - you get to try out your project on multiple machines. This can mean that your project gets used on different operating systems, and maybe on different browsers. :tada:
 
