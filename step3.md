@@ -8,8 +8,9 @@ Swap driver & computer again. But there's no need to raise a new github issue th
 Then click on "OAuth applications"  
 ![github settings](./images/github-settings.png)
 
-2. Now register the app you are creating:
-  + Click the "Register new application" button
+2. Now register the app you are creating:  
+  + Click the "Register new application" button, and you will see this screen:
+  ![register application page](./images/register-app.png)
   + `Application Name`: Call it what you like (but it generally makes sense for it to be the same name as your repo).  
   + `Homepage url`: type your `BASE_URL` (e.g. `https://localhost:3000` - don't forget the 's' in 'https')  
   + `Application description`: you can leave it blank for this workshop, but you might want to be descriptive when you create an actual project
