@@ -1,4 +1,4 @@
-## Step 6 - Session management - storing your access token
+## Step 6 - Session management (storing your access token)
 
 In theory, we can now use our access token to make requests to the Github API on behalf of the authenticated user. But before we can do that, we would need a way to store the token, so we can access it in other routes. I know what you're thinking! :cookie:
 
