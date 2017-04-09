@@ -16,7 +16,7 @@ It is up to the user to look through the list of permissions, and consent / not 
   Note: You only _need_ to pass in 2 of the parameters: the `client_id` & `redirect_uri`
   + You will need to use hapi's [`reply.redirect`](https://hapijs.com/api#replyredirecturi) method
 
-Hint: you may choose to use a helpful module called [`querystring`](https://nodejs.org/api/querystring.html), which is native to Node.js.
+Helpful tip: you can use a native module called [`querystring`](https://nodejs.org/api/querystring.html) to build your query.
 
 Run your server and go to `https://localhost:3000/login`. If your route is written correctly, you should see:
 
