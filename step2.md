@@ -1,10 +1,12 @@
 ## Step 2 - Set up your SSL certificates
 
-First of all, now that you're swapping pairs, you'll want to swap computers too. This is a good habit to get into, partly so that your github graphs reflect an equal contribution to the project (bragging rights!) It's also nice to be able to code on your own machine, with your own setup...particularly if you're a vim user :speak_no_evil:. Aaaaand one last benefit - you get to try out your project on multiple machines. This can mean that your project gets used on different operating systems, and maybe on different browsers. :tada:
+DISCLAIMER: This step is _not_ a necessary part of the OAuth flow - OAuth operates over HTTPS by default. You can choose to go directly to [step 3](./step3.md) if you prefer.
 
-Ever wondered why it's called OAuth 2? Well, we're not going to go into a history lesson here about OAuth 1. But OAuth 2 relies on TLS (Transport Layer Security), instead of the complicated signature mechanisms of OAuth 1.  
+Ever wondered why it's called OAuth 2? Well, we're not going to go into a history lesson here about OAuth 1. But OAuth 2 relies on TLS (Transport Layer Security), instead of the complicated signature mechanisms of OAuth 1.
 
-Since there is some sensitive stuff being passed around here, we should make sure we're on a secure connection (HTTPS not HTTP)
+So while we're talking about security, let's show you how to get your _own application_ onto a secure HTTPS connection too :smile:
+
+First of all, now that you're swapping pairs, you'll want to swap computers too. This is a good habit to get into, partly so that your Github contribution graphs reflect an equal contribution to the project. (Bragging rights!) It's also nice to be able to code on your own machine, with your own setup...particularly if you're a vim user :speak_no_evil:. Aaaaand one last benefit - you get to try out your project on multiple machines. This can mean that your project gets used on different operating systems, and maybe on different browsers. :tada:
 
 Remember to raise a new issue on your github repo called `set up SSL certificates`. Now let's get going!
 
@@ -31,6 +33,10 @@ Now you have a third file called `cert.pem`.
 
 6. **Add "keys" to your gitignore**. NEVER PUSH YOUR KEYS TO GITHUB! :scream:
 
-7. Push your latest changes to github....yes the only thing that you have changed is that you added "keys" to your gitignore. But never forget this step :fire:.
+7. Change the `BASE_URL` variable in your `config.env` to `https`, instead of `http`.
+
+8. Push your latest changes to github....yes the only thing that you have changed is that you added "keys" to your gitignore. But never forget this step :fire:.
+
+If you start your server now, and try to go to `http://localhost:3000`, this won't work. You're on https now :tada:.
 
 On to [step 3](./step3.md)
