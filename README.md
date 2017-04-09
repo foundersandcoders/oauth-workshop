@@ -8,8 +8,9 @@ Pair up and swap driver/navigator at each step.
 
 ## Walkthrough
 + [Step 1 - set up a basic hapi server & serve 'Hello World'](./step1.md)
-+ [Step 2 - register your app](./step2.md)
-+ [Step 3 - create your login route](./step3.md)
-+ [Step 4 - create your redirect route](./step4.md)
-+ [Step 5 - store your access token](./step5.md)
-+ [Step 6 - use your access token](./step6.md)
++ Optional [s3ep 2 - set up your SSL certificates](./step2.md)
++ [Step 3 - register your app](./step3.md)
++ [Step 4 - create your login route](./step4.md)
++ [Step 5 - create your redirect route](./step5.md)
++ [Step 6 - store your access token](./step6.md)
++ [Step 7 - use your access token](./step7.md)
