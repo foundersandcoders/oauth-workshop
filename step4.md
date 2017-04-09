@@ -4,7 +4,7 @@ Raise a new issue on your project called `create login route with Github OAuth` 
 
 1. When a user goes to our login url, this begins the OAuth workflow. We need to handle this request.
 
-  + In your Hapi server, start by writing a new route - the method is `GET` and the path (a.k.a. endpoint) is `/login`
+  + In your hapi server, start by writing a new route - the method is `GET` and the path (a.k.a. endpoint) is `/login`
 
 The handler for this route needs to redirect the user straight to Github. Then the user can give their consent to our application having certain, limited access to their Github account. It is up to the 3rd party (in this case, Github) to decide which permissions are given as part of this OAuth procedure. But these permissions are displayed for consent by the user.
 

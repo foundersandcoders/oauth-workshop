@@ -28,7 +28,7 @@ Technically, the spec only mandates that the _authorisation_ server (Github, in 
 
 First of all, now that you're swapping pairs, you'll want to swap computers too. This is a good habit to get into, partly so that your Github contribution graphs reflect an equal contribution to the project. (Bragging rights!) It's also nice to be able to code on your own machine, with your own setup...particularly if you're a vim user :speak_no_evil:. Aaaaand one last benefit - you get to try out your project on multiple machines. This can mean that your project gets used on different operating systems, and maybe on different browsers. :tada:
 
-Remember to raise a new issue on your github repo called `set up SSL certificates`. Now let's get going!
+Remember to raise a new issue on your Github repo called `set up SSL certificates`. Now let's get going!
 
 1. Generate a key file for your certificate  
 `openssl genrsa -out key.pem 2048`  
@@ -55,7 +55,7 @@ Now you have a third file called `cert.pem`.
 
 7. Change the `BASE_URL` variable in your `config.env` to `https`, instead of `http`.
 
-8. Push your latest changes to github....yes the only thing that you have changed is that you added "keys" to your gitignore. But never forget this step :fire:.
+8. Push your latest changes to Github....yes the only thing that you have changed is that you added "keys" to your gitignore. But never forget this step :fire:.
 
 If you start your server now, and try to go to `http://localhost:3000`, this won't work. You're on https now :tada:.
 
