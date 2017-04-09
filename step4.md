@@ -6,9 +6,7 @@ Raise a new issue on your project called `create login route with Github OAuth` 
 
   + In your Hapi server, start by writing a new route - the method is `GET` and the path (a.k.a. endpoint) is `/login`
 
-The handler for this route needs to redirect the user straight to Github. Then the user can give their consent to our application having certain, limited access to their Github account. It is up to the 3rd party (in this case, Github) to decide which permissions are given as part of this OAuth procedure. But these permissions are displayed for consent by the user.   
-
-![github authorisation](./images/github-authorisation.png)  
+The handler for this route needs to redirect the user straight to Github. Then the user can give their consent to our application having certain, limited access to their Github account. It is up to the 3rd party (in this case, Github) to decide which permissions are given as part of this OAuth procedure. But these permissions are displayed for consent by the user.
 
 It is up to the user to look through the list of permissions, and consent / not consent to this sharing of details.
 
@@ -19,3 +17,9 @@ It is up to the user to look through the list of permissions, and consent / not 
   + You will need to use hapi's [`reply.redirect`](https://hapijs.com/api#replyredirecturi) method
 
 Hint: you may choose to use a helpful module called [`querystring`](https://nodejs.org/api/querystring.html), which is native to Node.js.
+
+Run your server and go to `https://localhost:3000/login`. If your route is written correctly, you should see:
+
+![github authorisation](./images/github-authorisation.png)
+
+Go to [step 5](./step5.md) to handle the endpoint you will be sent to if you click "Authorize application".
