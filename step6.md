@@ -24,3 +24,5 @@ For more on the benefits of hapi as a backend framework, head to [this DWYL repo
 + But we still shouldn't put the access token directly into our cookie. This is sensitive information, so let's encrypt it with `bcrypt`.
 
 Hint: "how to use `bcrypt`" was part of your week 7 research topics.
+
+Ok! :cookie: time! [Step 7](/step7.md)

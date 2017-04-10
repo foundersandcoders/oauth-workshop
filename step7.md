@@ -7,4 +7,4 @@ We're not dealing with hapi authentication just yet.
 + Use [`server.state`](https://hapijs.com/api#serverstatename-options) - so-called because it deals with persisting "state" across multiple requests - to store information / data that you want to be accessible across pages.  
 Hint: See the [hapi tutorial on cookies](https://hapijs.com/tutorials/cookies?lang=en_US)).
 
-Once you've set your cookie, with your access token inside, you can finish up with [step 7](./step7.md)
+Once you've set your cookie, with your access token inside, you can finish up with [step 8](./step8.md)

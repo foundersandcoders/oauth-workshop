@@ -14,4 +14,4 @@ Remembering the OAuth flow, we know that Github is going to send us back a tempo
   **Hint 2:** the `code` will be sent to you at the redirect URI as a query parameter (e.g. `/welcome?code=foo`. How do you access query parameters using the `request` object?
   + Reply with the home view that you created in step 1
 
-On to session management - [step 6](./step6.md).
+Nearly ready to set your cookie - [step 6](./step6.md).
