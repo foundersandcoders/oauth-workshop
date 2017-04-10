@@ -58,7 +58,7 @@ Hint: `server.connection`
 
 8. Change the `BASE_URL` variable in your `config.env` to `https`, instead of `http`.
 
-9. Push your latest changes to Github....yes the only thing that you have changed is that you added "keys" to your gitignore. But never forget this step :fire:.
+9. Push your latest changes to Github.
 
 If you start your server now, and try to go to `http://localhost:3000`, this won't work. You're on https now :tada:.
 
