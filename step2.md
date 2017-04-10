@@ -53,9 +53,12 @@ Now you have a third file called `cert.pem`.
 
 6. **Add "keys" to your gitignore**. NEVER PUSH YOUR KEYS TO GITHUB! :scream:
 
-7. Change the `BASE_URL` variable in your `config.env` to `https`, instead of `http`.
+7. Browse through the hapi docs again to find out how to create an HTTPS connection on your server.  
+Hint: `server.connection`
 
-8. Push your latest changes to Github....yes the only thing that you have changed is that you added "keys" to your gitignore. But never forget this step :fire:.
+8. Change the `BASE_URL` variable in your `config.env` to `https`, instead of `http`.
+
+9. Push your latest changes to Github.
 
 If you're anything like me, at this point you'll be crying
 > Hold on! That was deeply dissatisfying. I don't want to just paste random commands into my termainal! What did all of that mean?
