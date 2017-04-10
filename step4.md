@@ -15,7 +15,7 @@ It is up to the user to look through the list of permissions, and consent / not 
 + Fill in the handler for this route:
   + Find out the Github url that your app needs to query, by looking in the docs of the 3rd party application that you're using  
   [Here are the Github API docs again](https://developer.github.com/v3/oauth/#web-application-flow)  
-  Note: You only _need_ to pass in 2 of the parameters: the `client_id` & `redirect_uri`
+  Note: The only parameter you _need_ to pass is the `client_id`, but check out the optional parameters that you have too.
   + You will need to use hapi's [`reply.redirect`](https://hapijs.com/api#replyredirecturi) method
 
 + Test your route with [`server.inject`](https://hapijs.com/api#serverinjectoptions-callback)
