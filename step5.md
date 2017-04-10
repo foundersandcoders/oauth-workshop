@@ -6,7 +6,7 @@ So we need another route on our server to handle this redirection :+1:
 
 Remembering the OAuth flow, we know that Github is going to send us back a temporary code in the URL query. But we still need to retrieve our access token, in order to access the Github API on behalf of the user.
 
-1. In your hapi server, write a new route in your `routes` direcotry. This is a `GET` route for the `/welcome` endpoint.
+1. In your hapi server, write a new route in your `routes` directory. This is a `GET` route for the `/welcome` endpoint.
 
 2. The handler needs to:
   + Send a `POST` request to the relevant endpoint on the Github API - time to go back to [the Github docs](https://developer.github.com/v3/oauth). Don't forget to include the necessary parameters in the body of your request.  
