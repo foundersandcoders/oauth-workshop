@@ -15,7 +15,8 @@ Swap driver & computer again. But there's no need to raise a new github issue th
   + `Application Name`: Call it what you like (but it generally makes sense for it to be the same name as your repo).  
   + `Homepage url`: type your `BASE_URL` (e.g. `https://localhost:3000` - don't forget the 's' in 'https')  
   + `Application description`: you can leave it blank for this workshop, but you might want to be descriptive when you create an actual project
-  + `Authorization callback url`: type your `BASE_URL` + `/welcome` (e.g. `https://localhost:3000/welcome`)
+  + `Authorization callback url`: type your `BASE_URL` + `/welcome` (e.g. `https://localhost:3000/welcome`)  
+  Note: You want to access your `BASE_URL` from your `config.env` by installing the `env2` module
 
 4. Add 2 new variables to your `config.env`: `CLIENT_ID` and `CLIENT_SECRET`, taken from your app page on Github.  
 Remember: you need to preface these lines in your `config.env` with "export" (not "export**s**")  
