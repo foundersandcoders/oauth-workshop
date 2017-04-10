@@ -10,8 +10,8 @@ Remembering the OAuth flow, we know that Github is going to send us back a tempo
 
 2. The _handler_ needs to:
   + _Send_ a `POST` request to the relevant endpoint on the Github API - time to go back to [the Github docs](https://developer.github.com/v3/oauth). Don't forget to include the necessary parameters in the body of your request.  
-  You'll probably want to use the [`request` module](https://www.npmjs.com/package/request)  
-  Hint: the `code` will be sent to you at the redirect URI as a query parameter (e.g. `/welcome?code=foo`. How do you access query parameters using the `request` object?
+  **Hint 1:** You'll probably want to use the [`request` module](https://www.npmjs.com/package/request)  
+  **Hint 2:** the `code` will be sent to you at the redirect URI as a query parameter (e.g. `/welcome?code=foo`. How do you access query parameters using the `request` object?
   + Reply with the home view that you created in step 1
 
 On to session management - [step 6](./step6.md).
