@@ -14,4 +14,6 @@ Pair up and swap driver/navigator at each step.
 + [Step 3 - Register your app](./step3.md)
 + [Step 4 - Create your login route](./step4.md)
 + [Step 5 - Create your redirect route](./step5.md)
-+ [Step 6 - Session management (storing your access token)](./step6.md)
++ [Step 6 - Protecting your access token](./step6.md)
++ [Step 7 - Session management (storing your access token)](./step7.md)
++ [Step 8 - Use your access token](./step8.md)
