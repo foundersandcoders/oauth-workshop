@@ -20,6 +20,7 @@ and `httpOnly` set to `true` by default as well
 For more on the benefits of hapi as a backend framework, head to [this DWYL repo](https://github.com/dwyl/learn-hapi#why-hapi-instead-of-xyz-framework).
 
 
-Great! So we're ready to store our access token in a cookie. How do we do that? Well....guess what???
+Great! So we're ready to store our access token in a cookie. And how do we do that? We could use `hapi-auth-cookie`, but that's a bit overkill at the moment. We're not dealing with hapi authentication just yet.
 
-Head to the docs :grin:
+1. Use [`server.state`](https://hapijs.com/api#serverstatename-options) - so-called because it deals with persisting "state" across multiple requests - to store information / data that you want to be accessible across pages.  
+Hint: See the [hapi tutorial on cookies](https://hapijs.com/tutorials/cookies?lang=en_US)).
