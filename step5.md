@@ -8,8 +8,8 @@ Remembering the OAuth flow, we know that Github is going to send us back a tempo
 
 1. In your hapi server, write a new route in your `routes` directory. This is a `GET` route for the `/welcome` endpoint.
 
-2. The handler needs to:
-  + Send a `POST` request to the relevant endpoint on the Github API - time to go back to [the Github docs](https://developer.github.com/v3/oauth). Don't forget to include the necessary parameters in the body of your request.  
+2. The _handler_ needs to:
+  + _Send_ a `POST` request to the relevant endpoint on the Github API - time to go back to [the Github docs](https://developer.github.com/v3/oauth). Don't forget to include the necessary parameters in the body of your request.  
   You'll probably want to use the [`request` module](https://www.npmjs.com/package/request)  
   Hint: the `code` will be sent to you at the redirect URI as a query parameter (e.g. `/welcome?code=foo`. How do you access query parameters using the `request` object?
   + Reply with the home view that you created in step 1
