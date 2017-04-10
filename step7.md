@@ -1,7 +1,10 @@
-## Step 7 - Use your access token
+## Step 7 - Session management (storing your access token)
 
-Now create another route, with any name, that uses your access token to send a request to the Github API.
+Great! So we're ready to store our access token in a cookie. And how do we do that? We could use `hapi-auth-cookie`, but that's a bit overkill at the moment.
 
-Explore the Github API. There's a lot to pick from.
+We're not dealing with hapi authentication just yet.
 
-If you're stuck for ideas, try to follow a user using an API request. You may need to sign into your app again, this time using the user:follow scope.
++ Use [`server.state`](https://hapijs.com/api#serverstatename-options) - so-called because it deals with persisting "state" across multiple requests - to store information / data that you want to be accessible across pages.  
+Hint: See the [hapi tutorial on cookies](https://hapijs.com/tutorials/cookies?lang=en_US)).
+
+Once you've set your cookie, with your access token inside, you can finish up with [step 7](./step7.md)
