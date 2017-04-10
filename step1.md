@@ -11,7 +11,7 @@ Try to do this step without looking back at your previous projects. Use the hapi
 3. Clone your repo & `cd` into the directory.  
 Create a new node project locally, by running `npm init` to create your `package.json`
 
-4. Create a hapi server that serves up a basic `html` file at `/`, displaying 'Hello World'  
+4. Create a hapi server that serves up a basic `html` file at `/`, with 'Hello World' in the title, and a button in the body, whose text says 'login'  
 Remember, you will need to install `hapi` and `inert`  
 Hint: `server.connection`, `server.register`, `server.route` & `server.start`
 
