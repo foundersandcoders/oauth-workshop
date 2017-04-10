@@ -48,7 +48,7 @@ Now you have a third file called `cert.pem`.
 
 5. Store the `cert.pem` and `key.pem` files in a safe place, away from the rest of your project.  
 `mkdir keys`  
-`mv cert.pem keys/cert.pem`
+`mv cert.pem keys/cert.pem`  
 `mv key.pem keys/key.pem`
 
 6. **Add "keys" to your gitignore**. NEVER PUSH YOUR KEYS TO GITHUB! :scream:
