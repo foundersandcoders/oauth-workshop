@@ -57,6 +57,11 @@ Now you have a third file called `cert.pem`.
 
 8. Push your latest changes to Github....yes the only thing that you have changed is that you added "keys" to your gitignore. But never forget this step :fire:.
 
-If you start your server now, and try to go to `http://localhost:3000`, this won't work. You're on https now :tada:.
+If you're anything like me, at this point you'll be crying
+> Hold on! That was deeply dissatisfying. I don't want to just paste random commands into my termainal! What did all of that mean?
+
+If that's you, this article has a great explanation of [how HTTPS works](http://robertheaton.com/2014/03/27/how-does-https-actually-work/), but there is a workshop coming up later that may also help.
+
+Until then, all you need to know is that, if you start your server and go to `http://localhost:3000`, it won't work. You're on https now :tada:.
 
 On to [step 3](./step3.md)
