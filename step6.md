@@ -26,4 +26,4 @@ Look in `hapi-auth-cookie`'s '[npm module description](https://www.npmjs.com/pac
 
 2. Set your cookie with the access token inside.
 
-Once you've set your cookie, with your access token inside, you can finish up with [step 8](./step8.md)
+Once you've set your cookie, with your access token inside, you can finish up with [step 7](./step7.md)
