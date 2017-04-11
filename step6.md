@@ -1,28 +1,58 @@
-## Step 6 - Protecting your access token
+## Step 6 - Session management (storing your access token)
 
-We can now use our access token to make requests to the Github API on behalf of the authenticated user. But before we can do that, we need a way to store the token, so we can access it via other routes. :cookie: :cookie: :cookie:
+Great! So we're ready to store our access token in a cookie.
 
-Beware of passing sensitive information across an insecure connection.
-> Cookies are typically transmitted in the clear.  Thus, any
-   information contained in them is at risk of disclosure.  Therefore,
-   bearer tokens MUST NOT be stored in cookies that can be sent in the
-   clear.  See "HTTP State Management Mechanism" [RFC6265] for security
-   considerations about cookies.
+Why are we doing this? Well, we want to keep track of the fact that a user has logged in (i.e. their "session" on our application has started). The cookie makes this information available (the information "persists") across multiple requests. So all we have to do, is look for the cookie each time a client makes a request.
 
-In the OAuth flow, we're dealing with very sensitive user info. So it's always advisible to be running on HTTPS :+1:
+Note: Session management can be handled in many ways (e.g. local storage, session storage, IndexedDB). We are going to focus on cookies.
 
-Luckily, hapi also has our back by having `isSecure` set to `true` by default i.e.
-> the user agent will include the cookie in an HTTP request only if the request is transmitted over a secure channel
+### Setup
+[`hapi-auth-cookie`](https://github.com/hapijs/hapi-auth-cookie) is a useful plugin that handles the authentication _of the cookie_. The authentication of the _user_ is separate. `hapi-auth-cookie` protects the cookie's content by using a cryptographic utility called "iron" - find out more from its [npm module description](https://www.npmjs.com/package/iron).
 
-and `httpOnly` set to `true` by default as well
-> instructs the user agent to omit the cookie when providing access to cookies via "non-HTTP" APIs (such as a web browser API that exposes cookies to scripts)
+1. Install the the `hapi-auth-cookie` plugin.
 
-(Quotes from the [HTTP State Management Mechanism docs](https://tools.ietf.org/html/rfc6265))
+2. Register the plugin. Behind the scenes, `hapi-auth-cookie` has added a new authentication **scheme** to your hapi server called 'cookie'. (In the same way that you have `simple` with `hapi-auth-basic` - don't forget your validation function.)  
+Note: You can also create your own plugins for hapi, in which case, you would write your own scheme to go with it.
 
-For more on the benefits of hapi as a backend framework, head to [this DWYL repo](https://github.com/dwyl/learn-hapi#why-hapi-instead-of-xyz-framework).
+3. Now you're able to add an authentication **strategy** to your server - just like you did in your morning challenge with `hapi-auth-basic`. For future reference, hapi has a [tutorial on authentication](https://hapijs.com/tutorials/auth), that will help you find out how to set your strategy.
 
-+ But we still shouldn't put the access token directly into our cookie. This is sensitive information, so let's encrypt it with `bcrypt`.
+5. Apply your new strategy to your routes, so that unauthenticated users are not allowed to access the content of your app.
 
-Hint: "how to use `bcrypt`" was part of your week 7 research topics.
+### Put your access token inside the cookie
 
-Ok! :cookie: time! [Step 7](/step7.md)
+Look in `hapi-auth-cookie`'s '[npm module description](https://www.npmjs.com/package/hapi-auth-cookie) or in the [github repo](https://github.com/hapijs/hapi-auth-cookie).
+
+1. Configure the options for your cookie
+
+2. Set your cookie with the access token inside.
+
+Once you've set your cookie, with your access token inside, you can finish up with [step 8](./step8.md)
+## Step 7 - Session management (storing your access token)
+
+Great! So we're ready to store our access token in a cookie.
+
+Why are we doing this? Well, we want to keep track of the fact that a user has logged in (i.e. their "session" on our application has started). The cookie makes this information available (the information "persists") across multiple requests. So all we have to do, is look for the cookie each time a client makes a request.
+
+Note: Session management can be handled in many ways (e.g. local storage, session storage, IndexedDB). We are going to focus on cookies.
+
+### Setup
+[`hapi-auth-cookie`](https://github.com/hapijs/hapi-auth-cookie) is a useful plugin that handles the authentication _of the cookie_. The authentication of the _user_ is separate. `hapi-auth-cookie` protects the cookie's content by using a cryptographic utility called "iron" - find out more from its [npm module description](https://www.npmjs.com/package/iron).
+
+1. Install the the `hapi-auth-cookie` plugin.
+
+2. Register the plugin. Behind the scenes, `hapi-auth-cookie` has added a new authentication **scheme** to your hapi server called 'cookie'. (In the same way that you have `simple` with `hapi-auth-basic` - don't forget your validation function.)  
+Note: You can also create your own plugins for hapi, in which case, you would write your own scheme to go with it.
+
+3. Now you're able to add an authentication **strategy** to your server - just like you did in your morning challenge with `hapi-auth-basic`. For future reference, hapi has a [tutorial on authentication](https://hapijs.com/tutorials/auth), that will help you find out how to set your strategy.
+
+5. Apply your new strategy to your routes, so that unauthenticated users are not allowed to access the content of your app.
+
+### Put your access token inside the cookie
+
+Look in `hapi-auth-cookie`'s '[npm module description](https://www.npmjs.com/package/hapi-auth-cookie) or in the [github repo](https://github.com/hapijs/hapi-auth-cookie).
+
+1. Configure the options for your cookie
+
+2. Set your cookie with the access token inside.
+
+Once you've set your cookie, with your access token inside, you can finish up with [step 7](./step7.md)
