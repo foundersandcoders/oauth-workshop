@@ -1,4 +1,10 @@
+**Author**: [@jsms90](https://github.com/jsms90)
+
+**Maintainer**: [@jsms90](https://github.com/jsms90)  
+
 # OAuth workshop
+
+This full workshop has been built from the steps outlined in [FAC9's gitbook](https://foundersandcoders.gitbooks.io/fac9/content/week8/workshop.html).
 
 In this workshop we will be using the [OAuth 2 protocol](https://oauth.net/2/) to authorise a user logging in to our app. This method of authorisation uses a 3rd party API (in this case, Github). In this guide, you will complete #1-#6 of the OAuth flow diagram from this morning.
 
